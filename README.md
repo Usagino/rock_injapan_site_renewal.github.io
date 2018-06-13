@@ -1,4 +1,4 @@
-# rock_injapan_site_renewal
+# ROCKinjapan site Renewal
 under construction
 ---
 ## Assignment
@@ -7,8 +7,8 @@ Hello, I'm yuki
 
 This is teacher ryo assignment.
 
+It was a part of group learning.
 
-The problem which remodels a site of an exhibition.
 
 Language, software, service used
 
@@ -18,8 +18,9 @@ Language, software, service used
 - cssft
 - adobe XD
 - adobe Illustrator
+- adobe Photoshop
 - Atom
 - Github
 
 ## pageURL
-<a href="https://usagino.github.io/Architecture_Anomalies.github.io/" target="_blank">Architecture_Anomalies</a>
+<a href="https://usagino.github.io/rock_injapan_site_renewal.github.io/" target="_blank">ROCKinjapan</a>
