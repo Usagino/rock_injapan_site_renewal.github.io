@@ -9,6 +9,8 @@ This is teacher ryo assignment.
 
 It was a part of group learning.
 
+<a href="https://usagino.github.io/rock_injapan_site_renewal.github.io/" target="_blank">ROCKinjapan</a>
+
 
 Language, software, service used
 
@@ -22,5 +24,8 @@ Language, software, service used
 - Atom
 - Github
 
-## pageURL
-<a href="https://usagino.github.io/rock_injapan_site_renewal.github.io/" target="_blank">ROCKinjapan</a>
+### Member
+
+- Kouya matsuba(Design)
+- Kan wonson(plan)
+- Yuki itoh(coding)
