@@ -1,14 +1,39 @@
-@font-face {
-  font-family: "basictitlefont";
-  src: url("material/basictitlefont.ttf");
+body {
+  height: calc(100vh * 4);
 }
 
-@font-face {
-  font-family: "Wingdings2";
-  src: url("material/Wingdings2.ttf");
+.firstview {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../material/top.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-@font-face {
-  font-family: "Nagomi";
-  src: url("material/Nagomi.ttf");
+.firstview .logowrap {
+  position: relative;
+  width: auto;
+}
+
+.firstview .logowrap img:nth-child(1) {
+  position: absolute;
+  margin: auto;
+  top: 50vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 543px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.firstview .logowrap img:nth-child(2) {
+  position: absolute;
+  margin: auto;
+  top: 50vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  width: auto;
 }
