@@ -26,6 +26,6 @@ Language, software, service used
 
 ### Member
 
-- Kouya matsuba(Design)
+- Kouya matsuba(Design)
 - Kan wonson(plan)
-- Yuki itoh(coding)
+- Yuki itoh(coding)
