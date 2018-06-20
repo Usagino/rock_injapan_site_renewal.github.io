@@ -22,6 +22,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  top: 49vh !important;
+  left: -13px !important;
   height: 543px;
   width: auto;
   opacity: 0.8;

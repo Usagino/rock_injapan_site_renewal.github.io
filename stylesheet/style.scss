@@ -1,5 +1,10 @@
 @import "_variable.scss";
-
+@mixin center{
+  position: absolute;
+  margin: auto;
+  top: 50vh;bottom: 0;
+  left: 0;right: 0;
+}
 
 body{
   height: calc(100vh * 4);
@@ -13,23 +18,18 @@ body{
 
   .logowrap{
     position: relative;
-
-
     width: auto;
     img:nth-child(1){
-      position: absolute;
-      margin: auto;
-      top: 50vh;bottom: 0;
-      left: 0;right: 0;
+      @include center;
+      top: 49vh !important;
+      left: -13px !important;
       height: 543px;
       width: auto;
       opacity: 0.8;
     }
     img:nth-child(2){
-      position: absolute;
-      margin: auto;
-      top: 50vh;bottom: 0;
-      left: 0;right: 0;
+      @include center;
+
       height: 140px;
       width: auto;
     }
