@@ -64,7 +64,7 @@ header{
   background-position: 100% 100%;
 
   h1{
-    margin: 50px auto;
+    margin: 17vh auto 50px;
     color:$white;
     position: relative;
     // z-index: 100;
@@ -108,8 +108,10 @@ header{
       left: -330px;
 
       @for $img_num from 1 through 5{
+        $speed:7;//この値を変えればカルーセルのスピードを変えれる
+        $delay:0.25 * $speed * ($img_num - 1);
         &:nth-child(#{$img_num}){
-          animation: artist_carousel 10s linear #{($img_num - 1) * (1.25 * 2)}s infinite;
+          animation: artist_carousel #{$speed}s linear #{$delay}s infinite;
         }
       }
     }
