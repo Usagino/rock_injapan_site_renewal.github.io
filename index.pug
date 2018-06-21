@@ -20,15 +20,28 @@ html(lang="en")
             li
             li
       main
-        div.firstview
-          div.logowrap
+        div#logowrap
+          div.logos
             img(src="material/logoback.png")
-            img(src="material/logo.png")
+            img(src="material/logo.png")    
           div.blur
-              
-        div.artist
-          
-        div.about
+            
+        div#firstview
+        
+        div#artist
+          div.container
+            h1 ARTIST
+            div.days
+              ul
+                li 8.4 sat
+                li 8.5 sun
+                li 8.11 sat
+                li 8.12 sun
+            div.artist_wrap
+              - for (var x = 1; x < 5; x++)
+                img(src="material/artist_"+ x + ".jpg")
+            
+        div#about
       footer
         div.sponser
           ul

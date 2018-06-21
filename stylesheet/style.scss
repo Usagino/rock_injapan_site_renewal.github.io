@@ -1,72 +1,122 @@
 @import "_variable.scss";
+@import "_animation.scss";
 @mixin center{
-  position: fixed;
   margin: auto;
   top: 0;bottom: 0;
   left: 0;right: 0;
-  z-index: 4;
 }
 @mixin fullsize{
-  height: 100vh;
-  width: 100vw;
+  height: 100vh; width: 100vw;
 }
 
 body{
   height: calc(100vh * 4);
 }
-.firstview{
+
+
+header{
+
+}
+#logowrap{
+  position: relative;
+  z-index: 10;
+  .logos{
+    position: relative;
+    @include center;
+    z-index: 3;
+    img:nth-child(1){
+      @include center;
+      // top: 49vh !important;
+      // left: -13px !important;
+      height: 543px; width: auto;
+      opacity:0.7;
+      position: fixed;
+    }
+    img:nth-child(2){
+      @include center;
+      height: 140px; width: auto;
+      position: fixed;
+    }
+  }
+  .blur{
+    @include fullsize;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+#firstview{
   @include fullsize;
   background-image: url(../material/top.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  .logowrap{
-    position: relative;
-    z-index: 3;
 
-
-    img:nth-child(1){
-      @include center;
-      // top: 49vh !important;
-      // left: -13px !important;
-      height: 543px;
-      width: auto;
-      opacity:0.7;
-      background-blend-mode: multiply;
-    }
-    img:nth-child(2){
-      @include center;
-      height: 140px;
-      width: auto;
-      &:after{
-        -webkit-filter: blur(2px);
-        filter: blur(2px);
-        position: relative;
-        top: 0;
-        left: 0;
-      }
-    }
-
-  }
-  .blur{
-    @include fullsize;
-    position: relative;
-    top: 100vh;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.84)
-  }
 }
-.artist{
+#artist{
   @include fullsize;
-
   overflow: hidden;
   background-image: url(../material/artist_back_new.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 100%;
-  // background-attachment: fixed;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
 
+  h1{
+    margin: 50px auto;
+    color:$white;
+    position: relative;
+    // z-index: 100;
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    &::before{
+      height: 2px;
+      width: 114px;
+      position: absolute;
+      top: 1.3em;
+      content: "";
+      display: inline-block;
+      background: $white;
+    }
+  }
+  ul{
+    color: $white;
+    text-align: center;
+    li{
+      margin: 0 20px;
+      text-align: center;
+      display: inline-block;
+      border:solid 1.5px #fff;
+      border-radius:3px;
+      height: 35px; width: 100px;
+    }
+  }
+  .artist_wrap{
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 220px; width: 1040px;
+    overflow: hidden;
+    position: relative;
+    img{
+      height: 220px; width: 330px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: absolute;
+      top:0;
+      left: -330px;
+
+      @for $img_num from 1 through 5{
+        &:nth-child(#{$img_num}){
+          animation: artist_carousel 10s linear #{($img_num - 1) * (1.25 * 2)}s infinite;
+        }
+      }
+    }
+  }
+}
+
+.container{
+  position: relative;
+  z-index: 100;
 }
