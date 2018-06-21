@@ -49,7 +49,7 @@ body {
   position: fixed;
 }
 
-#logowrap .blur {
+#logowrap .mask {
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -57,6 +57,16 @@ body {
   left: 0;
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+#logowrap .mask_black {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: calc(100vh * 2);
+  left: 0;
+  z-index: 10;
+  background-color: black;
 }
 
 #firstview {
@@ -79,7 +89,7 @@ body {
 }
 
 #artist h1 {
-  margin: 17vh auto 50px;
+  margin: 14vh auto 50px;
   color: #ffffff;
   position: relative;
   display: inline-block;
@@ -132,26 +142,37 @@ body {
 }
 
 #artist .artist_wrap img:nth-child(1) {
-  animation: artist_carousel 7s linear 0s infinite;
+  animation: artist_carousel 12s linear 0s infinite;
 }
 
 #artist .artist_wrap img:nth-child(2) {
-  animation: artist_carousel 7s linear 1.75s infinite;
+  animation: artist_carousel 12s linear 3s infinite;
 }
 
 #artist .artist_wrap img:nth-child(3) {
-  animation: artist_carousel 7s linear 3.5s infinite;
+  animation: artist_carousel 12s linear 6s infinite;
 }
 
 #artist .artist_wrap img:nth-child(4) {
-  animation: artist_carousel 7s linear 5.25s infinite;
+  animation: artist_carousel 12s linear 9s infinite;
 }
 
 #artist .artist_wrap img:nth-child(5) {
-  animation: artist_carousel 7s linear 7s infinite;
+  animation: artist_carousel 12s linear 12s infinite;
+}
+
+#movie iframe {
+  height: calc(800px * 0.563);
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
+  height: 100vh;
+  width: 100vw;
   position: relative;
   z-index: 100;
 }

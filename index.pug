@@ -24,7 +24,8 @@ html(lang="en")
           div.logos
             img(src="material/logoback.png")
             img(src="material/logo.png")    
-          div.blur
+          div.mask
+          div.mask_black
             
         div#firstview
         
@@ -40,7 +41,11 @@ html(lang="en")
             div.artist_wrap
               - for (var x = 1; x < 5; x++)
                 img(src="material/artist_"+ x + ".jpg")
-            
+        div#movie
+          div.container
+            iframe(src="https://www.youtube.com/embed/WTnLi9AfWu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+
+            //- iframe(width="560" height="315" src="https://www.youtube.com/embed/WTnLi9AfWu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
         div#about
       footer
         div.sponser

@@ -38,13 +38,21 @@ header{
       position: fixed;
     }
   }
-  .blur{
+  .mask{
     @include fullsize;
     position: absolute;
     top: 100vh;
     left: 0;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.7);
+  }
+  .mask_black{
+    @include fullsize;
+    position: absolute;
+    top: calc(100vh * 2);
+    left: 0;
+    z-index: 10;
+    background-color: black;
   }
 }
 #firstview{
@@ -64,7 +72,7 @@ header{
   background-position: 100% 100%;
 
   h1{
-    margin: 17vh auto 50px;
+    margin: 14vh auto 50px;
     color:$white;
     position: relative;
     // z-index: 100;
@@ -108,7 +116,7 @@ header{
       left: -330px;
 
       @for $img_num from 1 through 5{
-        $speed:7;//この値を変えればカルーセルのスピードを変えれる
+        $speed:12;//この値を変えればカルーセルのスピードを変えれる
         $delay:0.25 * $speed * ($img_num - 1);
         &:nth-child(#{$img_num}){
           animation: artist_carousel #{$speed}s linear #{$delay}s infinite;
@@ -117,8 +125,18 @@ header{
     }
   }
 }
+#movie{
 
+  iframe{
+    height: calc(800px * 0.563);width: 800px;
+    position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  }
+}
 .container{
+  @include fullsize;
   position: relative;
   z-index: 100;
 }
