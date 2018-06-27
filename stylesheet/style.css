@@ -142,35 +142,35 @@ header nav ul li {
 }
 
 header nav ul li:nth-child(1) {
-  animation: nav_anime1 1s linear 0s forwards;
+  animation: nav_anime1 0.7s linear 0s forwards;
 }
 
 header nav ul li:nth-child(2) {
-  animation: nav_anime2 2s linear 0s forwards;
+  animation: nav_anime2 1.4s linear 0s forwards;
 }
 
 header nav ul li:nth-child(3) {
-  animation: nav_anime3 3s linear 0s forwards;
+  animation: nav_anime3 2.1s linear 0s forwards;
 }
 
 header nav ul li:nth-child(4) {
-  animation: nav_anime4 4s linear 0s forwards;
+  animation: nav_anime4 2.8s linear 0s forwards;
 }
 
 header nav ul li:nth-child(5) {
-  animation: nav_anime5 5s linear 0s forwards;
+  animation: nav_anime5 3.5s linear 0s forwards;
 }
 
 header nav ul li:nth-child(6) {
-  animation: nav_anime6 6s linear 0s forwards;
+  animation: nav_anime6 4.2s linear 0s forwards;
 }
 
 header nav ul li:nth-child(7) {
-  animation: nav_anime7 7s linear 0s forwards;
+  animation: nav_anime7 4.9s linear 0s forwards;
 }
 
 header nav ul li:nth-child(8) {
-  animation: nav_anime8 8s linear 0s forwards;
+  animation: nav_anime8 5.6s linear 0s forwards;
 }
 
 #logowrap {

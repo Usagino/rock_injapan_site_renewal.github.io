@@ -60,7 +60,7 @@ header{
         text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
         @for $li_num from 1 through 8{
           &:nth-child(#{$li_num}){
-            animation: nav_anime#{$li_num} #{$li_num}s linear 0s forwards;
+            animation: nav_anime#{$li_num} #{$li_num * 0.7}s linear 0s forwards;
           }
         }
 
