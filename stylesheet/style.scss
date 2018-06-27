@@ -8,12 +8,9 @@
 @mixin fullsize{
   height: 100vh; width: 100vw;
 }
-
-body{
-  height: calc(100vh * 4);
-}
 @mixin h1($line_length){
   h1{
+    font-family: akukamu;
     letter-spacing: 0.2em;
     margin: 10vh auto 50px;
     color:$white;
@@ -32,8 +29,46 @@ body{
     }
   }
 }
-
+@font-face {
+  font-family: "akukamu";
+  src: url(../material/Aku&Kamu.otf);
+}
+body{
+  height: calc(100vh * 4);
+}
 header{
+  position: relative;
+  z-index: 200;
+  nav{
+    position: fixed;
+
+    left: 0;right: 0;
+    margin: 0 auto;
+    ul{
+      text-align: center;
+
+      li{
+        width: 142px;
+        text-align: center;
+        letter-spacing: 0.2em;
+        font-family: "akukamu";
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 18px;
+        z-index: 200;
+        color:$white;
+        text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
+        @for $li_num from 1 through 8{
+          &:nth-child(#{$li_num}){
+            animation: nav_anime#{$li_num} #{$li_num}s linear 0s forwards;
+          }
+        }
+
+      }
+
+
+    }
+  }
 
 }
 #logowrap{
@@ -73,6 +108,7 @@ header{
     z-index: 10;
     background-color: black;
   }
+
 }
 #firstview{
   @include fullsize;
@@ -90,7 +126,7 @@ header{
   background-repeat: no-repeat;
   background-position: 100% 100%;
 
-  @include h1(180px);
+  @include h1(130px);
   ul{
     color: $white;
     text-align: center;
@@ -128,7 +164,7 @@ header{
   }
 }
 #movie{
-  @include h1(195px);
+  @include h1(145px);
 
 
 
@@ -139,6 +175,13 @@ header{
   	left: 50%;
   	transform: translate(-50%, -50%);
   }
+}
+#about{
+  @include h1(130px);
+  background-image: url(../material/about.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .container{
   @include fullsize;

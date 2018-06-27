@@ -30,7 +30,6 @@ $link_color: $black;
     color: $hover_color;
   }
 }
-
 @mixin box_all($max-width) {
   margin: 0 auto;
   width: 100%;
@@ -78,6 +77,7 @@ $box_all_desktop: 1000px;
     bottom: -1px !important;
   }
 }
+
 $divcount: 7;
 $layer: 10;
 @mixin ham_icon {

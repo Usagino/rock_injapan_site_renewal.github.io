@@ -7,8 +7,170 @@
   }
 }
 
+@keyframes nav_anime1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-142px);
+  }
+  100% {
+    transform: translateX(-142px) translateY(70px);
+  }
+}
+
+@keyframes nav_anime2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-284px);
+  }
+  100% {
+    transform: translateX(-284px) translateY(140px);
+  }
+}
+
+@keyframes nav_anime3 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-426px);
+  }
+  100% {
+    transform: translateX(-426px) translateY(210px);
+  }
+}
+
+@keyframes nav_anime4 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-568px);
+  }
+  100% {
+    transform: translateX(-568px) translateY(280px);
+  }
+}
+
+@keyframes nav_anime5 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-710px);
+  }
+  100% {
+    transform: translateX(-710px) translateY(350px);
+  }
+}
+
+@keyframes nav_anime6 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-852px);
+  }
+  100% {
+    transform: translateX(-852px) translateY(420px);
+  }
+}
+
+@keyframes nav_anime7 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-994px);
+  }
+  100% {
+    transform: translateX(-994px) translateY(490px);
+  }
+}
+
+@keyframes nav_anime8 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1136px);
+  }
+  100% {
+    transform: translateX(-1136px) translateY(560px);
+  }
+}
+
+@font-face {
+  font-family: "akukamu";
+  src: url(../material/Aku&Kamu.otf);
+}
+
 body {
   height: calc(100vh * 4);
+}
+
+header {
+  position: relative;
+  z-index: 200;
+}
+
+header nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+header nav ul {
+  text-align: center;
+}
+
+header nav ul li {
+  width: 142px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: "akukamu";
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 18px;
+  z-index: 200;
+  color: #ffffff;
+  text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
+}
+
+header nav ul li:nth-child(1) {
+  animation: nav_anime1 1s linear 0s forwards;
+}
+
+header nav ul li:nth-child(2) {
+  animation: nav_anime2 2s linear 0s forwards;
+}
+
+header nav ul li:nth-child(3) {
+  animation: nav_anime3 3s linear 0s forwards;
+}
+
+header nav ul li:nth-child(4) {
+  animation: nav_anime4 4s linear 0s forwards;
+}
+
+header nav ul li:nth-child(5) {
+  animation: nav_anime5 5s linear 0s forwards;
+}
+
+header nav ul li:nth-child(6) {
+  animation: nav_anime6 6s linear 0s forwards;
+}
+
+header nav ul li:nth-child(7) {
+  animation: nav_anime7 7s linear 0s forwards;
+}
+
+header nav ul li:nth-child(8) {
+  animation: nav_anime8 8s linear 0s forwards;
 }
 
 #logowrap {
@@ -89,6 +251,7 @@ body {
 }
 
 #artist h1 {
+  font-family: akukamu;
   letter-spacing: 0.2em;
   margin: 10vh auto 50px;
   color: #ffffff;
@@ -101,7 +264,7 @@ body {
 #artist h1::before {
   background-color: #ffffff;
   height: 2px;
-  width: 180px;
+  width: 130px;
   position: absolute;
   top: 1.2em;
   bottom: 0;
@@ -166,6 +329,7 @@ body {
 }
 
 #movie h1 {
+  font-family: akukamu;
   letter-spacing: 0.2em;
   margin: 10vh auto 50px;
   color: #ffffff;
@@ -178,7 +342,7 @@ body {
 #movie h1::before {
   background-color: #ffffff;
   height: 2px;
-  width: 195px;
+  width: 145px;
   position: absolute;
   top: 1.2em;
   bottom: 0;
@@ -195,6 +359,37 @@ body {
   top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#about {
+  background-image: url(../material/about.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#about h1 {
+  font-family: akukamu;
+  letter-spacing: 0.2em;
+  margin: 10vh auto 50px;
+  color: #ffffff;
+  display: inline-block;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+}
+
+#about h1::before {
+  background-color: #ffffff;
+  height: 2px;
+  width: 130px;
+  position: absolute;
+  top: 1.2em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
 }
 
 .container {
