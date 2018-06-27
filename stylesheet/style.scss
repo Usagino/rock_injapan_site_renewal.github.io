@@ -12,7 +12,26 @@
 body{
   height: calc(100vh * 4);
 }
-
+@mixin h1($line_length){
+  h1{
+    letter-spacing: 0.2em;
+    margin: 10vh auto 50px;
+    color:$white;
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    &::before{
+      background-color: $white;
+      height: 2px; width: $line_length;
+      position: absolute;
+      top:1.2em;bottom: 0;
+      left: 0;right: 0;
+      margin: auto;
+      content:"";
+    }
+  }
+}
 
 header{
 
@@ -71,24 +90,7 @@ header{
   background-repeat: no-repeat;
   background-position: 100% 100%;
 
-  h1{
-    margin: 14vh auto 50px;
-    color:$white;
-    position: relative;
-    // z-index: 100;
-    display: inline-block;
-    width: 100vw;
-    text-align: center;
-    &::before{
-      height: 2px;
-      width: 114px;
-      position: absolute;
-      top: 1.3em;
-      content: "";
-      display: inline-block;
-      background: $white;
-    }
-  }
+  @include h1(180px);
   ul{
     color: $white;
     text-align: center;
@@ -126,11 +128,14 @@ header{
   }
 }
 #movie{
+  @include h1(195px);
+
+
 
   iframe{
     height: calc(800px * 0.563);width: 800px;
     position: absolute;
-  	top: 50%;
+  	top: 52%;
   	left: 50%;
   	transform: translate(-50%, -50%);
   }

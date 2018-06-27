@@ -89,22 +89,26 @@ body {
 }
 
 #artist h1 {
-  margin: 14vh auto 50px;
+  letter-spacing: 0.2em;
+  margin: 10vh auto 50px;
   color: #ffffff;
-  position: relative;
   display: inline-block;
   width: 100vw;
   text-align: center;
+  position: relative;
 }
 
 #artist h1::before {
+  background-color: #ffffff;
   height: 2px;
-  width: 114px;
+  width: 180px;
   position: absolute;
-  top: 1.3em;
+  top: 1.2em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   content: "";
-  display: inline-block;
-  background: #ffffff;
 }
 
 #artist ul {
@@ -161,11 +165,34 @@ body {
   animation: artist_carousel 12s linear 12s infinite;
 }
 
+#movie h1 {
+  letter-spacing: 0.2em;
+  margin: 10vh auto 50px;
+  color: #ffffff;
+  display: inline-block;
+  width: 100vw;
+  text-align: center;
+  position: relative;
+}
+
+#movie h1::before {
+  background-color: #ffffff;
+  height: 2px;
+  width: 195px;
+  position: absolute;
+  top: 1.2em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+}
+
 #movie iframe {
   height: calc(800px * 0.563);
   width: 800px;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

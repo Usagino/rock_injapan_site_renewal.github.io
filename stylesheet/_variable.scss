@@ -339,5 +339,6 @@ $layer: 10;
     @include fadeOut_nav;
   }
 }
+
 $smartphone: "only screen and (min-width : 320px) and (max-width : 480px)";
 $tablet: "only screen (min-width : 480px) and (max-width : 1024px)";
