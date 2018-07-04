@@ -20,3 +20,21 @@ $textnode:4.45001;
 .navin{
   animation: navin 1s ease 0s forwards;
 }
+
+@keyframes fadeout{
+  100%{
+    right: -200px;
+  }
+}
+@keyframes fadein{
+  100%{
+    right: 85px;
+  }
+}
+.fadeout{
+  animation: fadeout 1s ease 0s forwards;
+}
+.fadein{
+  animation: fadein 1s ease 0s forwards;
+
+}

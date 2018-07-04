@@ -29,6 +29,26 @@
   animation: navin 1s ease 0s forwards;
 }
 
+@keyframes fadeout {
+  100% {
+    right: -200px;
+  }
+}
+
+@keyframes fadein {
+  100% {
+    right: 85px;
+  }
+}
+
+.fadeout {
+  animation: fadeout 1s ease 0s forwards;
+}
+
+.fadein {
+  animation: fadein 1s ease 0s forwards;
+}
+
 @font-face {
   font-family: "akukamu";
   src: url(../material/Aku&Kamu.otf);
@@ -124,6 +144,7 @@ header .icon .app {
   height: auto;
   right: 85px;
   bottom: 50px;
+  transition: right 1s;
 }
 
 #logowrap {
@@ -398,8 +419,8 @@ footer iframe {
   right: 0;
   left: 0;
   margin: auto;
-  width: 100vw;
-  height: 400px;
+  width: 90vw;
+  height: 340px;
 }
 
 footer .sponser {
