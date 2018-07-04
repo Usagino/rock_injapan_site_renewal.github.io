@@ -7,6 +7,18 @@
   }
 }
 
+@keyframes navin {
+  100% {
+    top: 10vh;
+    left: 80px;
+    opacity: 1;
+  }
+}
+
+.navin {
+  animation: navin 1s ease 0s forwards;
+}
+
 @font-face {
   font-family: "akukamu";
   src: url(../material/Aku&Kamu.otf);
@@ -24,8 +36,9 @@
 .whitebar .title {
   font-family: "akukamu";
   position: absolute;
-  top: 10vh;
+  top: -5vh;
   left: 80px;
+  opacity: 0;
   mix-blend-mode: difference;
   z-index: 10;
   color: white;
@@ -121,6 +134,7 @@ header nav ul li {
   overflow: hidden;
   background-image: url(../material/artistbackgroundimage.png);
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
@@ -247,6 +261,7 @@ header nav ul li {
   width: 100vw;
   background-color: black;
   position: relative;
+  background-attachment: fixed;
 }
 
 #movie iframe {
@@ -297,9 +312,10 @@ header nav ul li {
 }
 
 #about .about_wrap {
-  width: 40em;
+  width: 45em;
   margin: 0 auto;
   padding-top: 10%;
+  letter-spacing: 2px;
 }
 
 #about .about_wrap h2 {

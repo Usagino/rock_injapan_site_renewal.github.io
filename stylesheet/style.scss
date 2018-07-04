@@ -43,13 +43,15 @@ $textnode:4.45001;
   .title{
     font-family: "akukamu";
     position: absolute;
-    top: 10vh;
+    top: -5vh;
     left: 80px;
+    opacity: 0;
     mix-blend-mode: difference;
     z-index: 10;
     color: white;
     font-size: 50px;
     letter-spacing: 10px;
+
   }
 }
 
@@ -127,6 +129,7 @@ header{
   overflow: hidden;
   background-image: url(../material/artistbackgroundimage.png);
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: 100% 100%;
   @include h1(130px);
@@ -181,7 +184,6 @@ header{
   }
   .viewall{
     color: $white;
-
     $viewall_h:50px;
     text-align: center;
     width: 220px;
@@ -209,6 +211,8 @@ header{
   height: 85vh;width: 100vw;
   background-color: black;
   position: relative;
+  background-attachment: fixed;
+
   iframe{
     height: calc(800px * 0.563);width: 800px;
     @include center;
@@ -227,9 +231,10 @@ header{
   position: relative;
 
   .about_wrap{
-    width: 40em;
+    width: 45em;
     margin: 0 auto;
     padding-top:10%;
+    letter-spacing: 2px;
     h2{
       line-height: 2em;
       font-weight: bold;
@@ -245,7 +250,6 @@ header{
   }
 }
 .container{
-
   position: relative;
   z-index: 100;
 }
