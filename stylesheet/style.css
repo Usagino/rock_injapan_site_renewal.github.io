@@ -63,7 +63,7 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   z-index: 200;
 }
 
@@ -93,6 +93,37 @@ header nav ul li {
   font-size: 18px;
   z-index: 200;
   text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
+}
+
+header .icon {
+  position: relative;
+  height: 100vh;
+  width: 100px;
+  right: -95vw;
+  top: 0;
+}
+
+header .icon .twitter, header .icon .instagram {
+  position: absolute;
+  height: auto;
+  width: 40px;
+  right: 50px;
+}
+
+header .icon .twitter {
+  top: 43vh;
+}
+
+header .icon .instagram {
+  top: 50vh;
+}
+
+header .icon .app {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  right: 50px;
+  bottom: 50px;
 }
 
 #logowrap {
@@ -175,7 +206,7 @@ header nav ul li {
 }
 
 #artist ul {
-  margin-top: 7%;
+  margin-top: 11%;
   color: #ffffff;
   text-align: center;
 }
@@ -273,6 +304,7 @@ header nav ul li {
   background-color: black;
   position: relative;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #movie iframe {

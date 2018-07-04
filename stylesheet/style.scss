@@ -66,7 +66,7 @@ body{
   font-family: "Mplus 1p";
 }
 header{
-  position: relative;
+  position: fixed;
   z-index: 200;
   nav{
     mix-blend-mode: difference;
@@ -93,7 +93,32 @@ header{
         text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
       }
     }
+
   }
+  .icon{
+    position: relative;
+    height: 100vh;width: 100px;
+    right: -95vw;
+    top: 0;
+    .twitter,.instagram{
+      position: absolute;
+      height: auto;width: 40px;
+      right: 50px;
+    }
+    .twitter{
+      top: 43vh;
+    }
+    .instagram{
+      top: 50vh;
+    }
+    .app{
+      position: absolute;
+      width: 140px;height: auto;
+      right: 50px;
+      bottom: 50px;
+    }
+  }
+
 
 }
 #logowrap{
@@ -138,7 +163,7 @@ header{
   background-position: 100% 100%;
   @include h1(130px);
   ul{
-    margin-top: 7%;
+    margin-top: 11%;
     color: $white;
     text-align: center;
 
@@ -216,6 +241,7 @@ header{
   background-color: black;
   position: relative;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 
   iframe{
     height: calc(800px * 0.563);width: 800px;
@@ -269,4 +295,6 @@ footer{
       @include center;
     }
   }
+
+
 }
