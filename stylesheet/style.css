@@ -385,10 +385,27 @@ header .icon .app {
   z-index: 100;
 }
 
-footer {
+footer .map {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+}
+
+footer iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 100vw;
+  height: 400px;
+}
+
+footer .sponser {
+  background-color: white;
   position: relative;
   height: 10vh;
-  background-color: white;
 }
 
 footer .sponser img {

@@ -1,5 +1,5 @@
 $(function() {
-    $('html,body').animate({ scrollTop: 0 }, '1');
+    // $('html,body').animate({ scrollTop: 0 }, '1');
     $(window).scroll(function(event) {
       console.log("HeLLoworld");
       var pos = $(window).scrollTop();
