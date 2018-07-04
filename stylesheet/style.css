@@ -77,6 +77,12 @@
   letter-spacing: 10px;
 }
 
+@media all and (-ms-high-contrast: none) {
+  .whitebar .title {
+    background-color: black;
+  }
+}
+
 body {
   height: calc(100vh * 4);
   font-family: "Mplus 1p";
