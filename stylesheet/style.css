@@ -386,7 +386,7 @@ header .icon .app {
 }
 
 footer .map {
-  height: 70vh;
+  height: 400px;
   width: 100vw;
   position: relative;
 }
