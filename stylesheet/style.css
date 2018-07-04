@@ -305,6 +305,7 @@ header .icon .app {
   position: relative;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #movie iframe {
