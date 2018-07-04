@@ -18,8 +18,6 @@ $(function() {
         if (pos >eval("bar" + i) - 600) {
             $(".bar"+i+" .title").addClass('navin');
             console.log("hello");
-          }else{
-            $(".bar"+i+" .title").removeClass('navin');
           }
       }
 
