@@ -1,20 +1,24 @@
+$textnode:4.45001;
 @keyframes artist_carousel{
   0%{left: -330px;}
   100%{left: 1040px;}
 }
 
-@for $nav_anime_num from 1 through 8{
-  @keyframes nav_anime#{$nav_anime_num}{
-    $numX:($nav_anime_num * -142);
-    $numY:($nav_anime_num * 70);
-    0%{
-      transform: translateX(0);
-    }
-    50%{
-      transform: translateX(#{$numX}px);
-    }
-    100%{
-      transform: translateX(#{$numX}px) translateY(#{$numY}px);
-    }
-  }
-}
+// @for $nav_anime_num from 1 through 8{
+//   @keyframes nav_anime#{$nav_anime_num}{
+//
+//     $numX:(($nav_anime_num * -142) - ($textnode * $nav_anime_num));
+//     $numY:($nav_anime_num * 70);
+//
+//     0%{
+//       transform: translateX(0);
+//     }
+//     50%{
+//       transform: translateX(#{$numX}px);
+//     }
+//     100%{
+//       transform: translateX(#{$numX}px) translateY(#{$numY}px);
+//       text-align: left;
+//     }
+//   }
+// }

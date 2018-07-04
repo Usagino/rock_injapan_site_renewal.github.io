@@ -1,3 +1,4 @@
+$textnode:4.45001;
 @import "_variable.scss";
 @import "_animation.scss";
 @mixin center{
@@ -33,103 +34,107 @@
   font-family: "akukamu";
   src: url(../material/Aku&Kamu.otf);
 }
+.whitebar{
+  content: "";
+  background-color: white;
+  display: block;
+  width: 100vw;height: 15vh;
+  position: relative;
+  .title{
+    font-family: "akukamu";
+    position: absolute;
+    top: 10vh;
+    left: 80px;
+    mix-blend-mode: difference;
+    z-index: 10;
+    color: white;
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+}
+
+
+
 body{
   height: calc(100vh * 4);
+  font-family: "Mplus 1p";
 }
 header{
   position: relative;
   z-index: 200;
   nav{
+    mix-blend-mode: difference;
     position: fixed;
-
     left: 0;right: 0;
+
     margin: 0 auto;
+    color: white;
     ul{
       text-align: center;
-
       li{
-        width: 142px;
         text-align: center;
         letter-spacing: 0.2em;
         font-family: "akukamu";
+        mix-blend-mode: difference;
+        color:$white;
         display: inline-block;
+        font-weight: lighter;
+
+        margin: 0 8px;
         margin-top: 20px;
         font-size: 18px;
         z-index: 200;
-        color:$white;
         text-shadow: 4px 4px 1px rgba(150, 150, 150, 0.2);
-        @for $li_num from 1 through 8{
-          &:nth-child(#{$li_num}){
-            animation: nav_anime#{$li_num} #{$li_num * 0.7}s linear 0s forwards;
-          }
-        }
-
       }
-
-
     }
   }
 
 }
 #logowrap{
   position: relative;
-  z-index: 10;
-  .logos{
-    position: relative;
-    @include center;
-    z-index: 3;
-    img:nth-child(1){
-      @include center;
-      // top: 49vh !important;
-      // left: -13px !important;
-      height: 543px; width: auto;
-      opacity:0.7;
-      position: fixed;
-    }
-    img:nth-child(2){
-      @include center;
-      height: 140px; width: auto;
-      position: fixed;
-    }
-  }
-  .mask{
-    @include fullsize;
-    position: absolute;
-    top: 100vh;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  .mask_black{
-    @include fullsize;
-    position: absolute;
-    top: calc(100vh * 2);
-    left: 0;
-    z-index: 10;
-    background-color: black;
-  }
-
-}
-#firstview{
   @include fullsize;
   background-image: url(../material/top.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+  .logos{
+    position: absolute;
+    width: 500px;height: 500px;
+    @include center;
+    z-index: 3;
+    img:nth-child(1){
+      position: absolute;
+      height: 543px; width: auto;
+      opacity:0.7;
+      @include center;
+    }
+    img:nth-child(2){
+      position: absolute;
+      height: 140px; width: auto;
+      top: 199px;
+      left: 132px;
+
+    }
+  }
+
 }
+
 #artist{
-  @include fullsize;
+  font-family: "akukamu";
+  letter-spacing: 2px;
+  width: 100vw; height: 85vh;
   overflow: hidden;
-  background-image: url(../material/artist_back_new.png);
+  background-image: url(../material/artistbackgroundimage.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 100%;
-
   @include h1(130px);
   ul{
+    margin-top: 7%;
     color: $white;
     text-align: center;
+
     li{
       margin: 0 20px;
       text-align: center;
@@ -137,11 +142,14 @@ header{
       border:solid 1.5px #fff;
       border-radius:3px;
       height: 35px; width: 100px;
+      position: relative;
+      p{
+        line-height: 35px;
+      }
     }
   }
   .artist_wrap{
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 2% auto;
     height: 220px; width: 1040px;
     overflow: hidden;
     position: relative;
@@ -162,29 +170,82 @@ header{
       }
     }
   }
+  .whiteline{
+    margin: 0 auto;
+    content: "";
+    background-color: white;
+    height: 2px;
+    width: 1040px;
+    display: block;
+
+  }
+  .viewall{
+    color: $white;
+
+    $viewall_h:50px;
+    text-align: center;
+    width: 220px;
+    height: $viewall_h;
+    border:solid 1.5px #fff;
+    border-radius:3px;
+    margin: 2% auto;
+    &:before{
+      background-color: white;
+      display: block;
+      content: "";
+      width: 220px;
+      height: $viewall_h;
+      opacity: 0.5;
+      position: absolute;
+    }
+    p{
+      line-height: $viewall_h;
+    }
+
+  }
 }
 #movie{
-  @include h1(145px);
-
-
-
+  background-image: url(../material/historybackgroundimage.png);
+  height: 85vh;width: 100vw;
+  background-color: black;
+  position: relative;
   iframe{
     height: calc(800px * 0.563);width: 800px;
-    position: absolute;
-  	top: 52%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+    @include center;
+    position:  absolute;
+    top: -100px;
   }
 }
 #about{
   @include h1(130px);
-  background-image: url(../material/about.png);
+  background-image: url(../material/aboutbackgroundimage.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 85vh;width: 100%;
+  color: white;
+  position: relative;
+
+  .about_wrap{
+    width: 40em;
+    margin: 0 auto;
+    padding-top:10%;
+    h2{
+      line-height: 2em;
+      font-weight: bold;
+    }
+    li{
+      line-height: 2em;
+      font-weight: lighter;
+      span{
+        font-weight: 700;
+      }
+    }
+
+  }
 }
 .container{
-  @include fullsize;
+
   position: relative;
   z-index: 100;
 }

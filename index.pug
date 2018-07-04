@@ -6,6 +6,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet" href="stylesheet/reset.css")
         link(rel="stylesheet" href="stylesheet/style.css")
+        link(href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet")
         title ROCKinJAPAN2018
     body
       header
@@ -24,38 +25,56 @@ html(lang="en")
         div#logowrap
           div.logos
             img(src="material/logoback.png")
-            img(src="material/logo.png")    
-          div.mask
-          div.mask_black
-        div#firstview
+            img(src="material/logo.png")  
+        div.whitebar  
+          h1.title ARTIST
         div#artist
           div.container
-            h1 ARTIST
             div.days
               ul
-                li 8.4 sat
-                li 8.5 sun
-                li 8.11 sat
-                li 8.12 sun
+                li 
+                  p 8.4 sat
+                li 
+                  p 8.5 sun
+                li 
+                  p 8.11 sat
+                li 
+                  p 8.12 sun
             div.artist_wrap
               - for (var x = 1; x < 5; x++)
                 img(src="material/artist_"+ x + ".jpg")
+            div.whiteline
+            div.viewall
+              p View All
+            
+        div.whitebar  
+          h1.title HISTORY
         div#movie
-          div.container
-            h1 HISTORY
-            iframe(src="https://www.youtube.com/embed/WTnLi9AfWu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-            //- iframe(width="560" height="315" src="https://www.youtube.com/embed/WTnLi9AfWu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+          iframe(src="https://www.youtube.com/embed/WTnLi9AfWu8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+
+        div.whitebar  
+          h1.title ABOUT
         div#about
-          div.container
-            h1 ABOUT
+          div.about_wrap
+            h2 日程　2018年8月4日(土)·5日(日)、11日(土·祝)·12日(日)
+            h2 会場　国営ひたち海浜公園(茨城県ひたちなか市)
+            ul
+              li 時間　開場<span>8:00</span> 開演<span>10:30</span>終演<span>19:30</span>(各日とも予定)
+              li 雨天決行(荒天 の 昜合は中止)
+              li 主催　<span>TOKYO FM</span>
+              li 企画制作　ロッキング·オン·ジャパン
+              li 協賛　<span>Budweiser</span>/<span>ZIMA Red Bull Music</span>/ <span>POCARI SWEAT</span> /日本たばこ産業株式会
+              li 後援　ひたか市 //茨城県
+              li 協　JAPAN COUNTDOWN / wowow/ uP! / 茨城新聞 / 茨城放送
+              li 制作協力　ディスクガレージ
+              li お問い合わせ　<span>ROCK IN JAPAN FESTIVAL 2018</span>事務局
+              li <span>0180-993-611</span>(<span>24</span>時間音声対応)
+          
           
       
       footer
         div.sponser
-          ul
-            li
-            li
-            li
+          
         
       
       script(type="text/javascript" src="script/jquery-3.3.1.min.js")
