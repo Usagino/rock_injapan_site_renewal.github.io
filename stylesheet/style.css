@@ -15,6 +15,14 @@
   }
 }
 
+@keyframes navout {
+  100% {
+    top: 10vh;
+    left: 80px;
+    opacity: 1;
+  }
+}
+
 .navin {
   animation: navin 1s ease 0s forwards;
 }
@@ -31,6 +39,7 @@
   width: 100vw;
   height: 15vh;
   position: relative;
+  transition: top 1s,opacity 1s;
 }
 
 .whitebar .title {

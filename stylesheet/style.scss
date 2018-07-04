@@ -40,6 +40,7 @@ $textnode:4.45001;
   display: block;
   width: 100vw;height: 15vh;
   position: relative;
+  transition: top 1s,opacity 1s;
   .title{
     font-family: "akukamu";
     position: absolute;
@@ -51,6 +52,7 @@ $textnode:4.45001;
     color: white;
     font-size: 50px;
     letter-spacing: 10px;
+
 
   }
 }

@@ -10,6 +10,13 @@ $textnode:4.45001;
     opacity: 1;
   }
 }
+@keyframes navout{
+  100%{
+    top: 10vh;
+    left: 80px;
+    opacity: 1;
+  }
+}
 .navin{
   animation: navin 1s ease 0s forwards;
 }
