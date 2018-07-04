@@ -367,6 +367,10 @@ header .icon .app {
   font-weight: bold;
 }
 
+#about .about_wrap ul {
+  margin-top: 20px;
+}
+
 #about .about_wrap li {
   line-height: 2em;
   font-weight: lighter;
